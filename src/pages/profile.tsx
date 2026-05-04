@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Layout from '@/components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingBag, Settings, LogOut, ArrowRight } from '@/components/ui/Icons';
@@ -16,6 +16,17 @@ const ProfilePage = () => {
   const [name, setName] = useState('');
   const router = useRouter();
 
+  // Fetch orders logic wrapped in useCallback to avoid dependency warnings
+  const fetchOrders = useCallback(async () => {
+    try {
+      const data = await orderService.getMyOrders();
+      setOrders(data);
+    } catch (err) {
+      console.error(err);
+    }
+  }, []);
+
+  // First useEffect for Authentication and Data fetching
   useEffect(() => {
     if (!isAuthenticated) {
       router.push('/auth/login');
@@ -23,16 +34,16 @@ const ProfilePage = () => {
       if (user?.role !== 'MANAGER') fetchOrders();
       if (user) setName(user.name || '');
     }
-  }, [isAuthenticated, user]);
+  }, [isAuthenticated, user, router, fetchOrders]);
 
-  const fetchOrders = async () => {
-    try {
-      const data = await orderService.getMyOrders();
-      setOrders(data);
-    } catch (err) {
-      console.error(err);
+  const isManager = user?.role === 'MANAGER';
+
+  // Moved second useEffect UP (before the conditional return) to follow Rules of Hooks
+  useEffect(() => {
+    if (isManager && activeTab === 'orders') {
+      setActiveTab('settings');
     }
-  };
+  }, [isManager, activeTab]);
 
   const handleUpdateProfile = async () => {
     setLoading(true);
@@ -50,14 +61,8 @@ const ProfilePage = () => {
     }
   };
 
+  // Condition return moved down
   if (!user) return null;
-
-  const isManager = user.role === 'MANAGER';
-
-  useEffect(() => {
-    if (isManager && activeTab === 'orders') setActiveTab('settings');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isManager]);
 
   return (
     <Layout title="My Profile | FurNova">

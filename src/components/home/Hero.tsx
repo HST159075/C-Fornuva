@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next.js Image component
 
 const Hero = () => {
   return (
@@ -59,10 +60,14 @@ const Hero = () => {
           className="relative"
         >
           <div className="relative aspect-[4/5] rounded-t-[200px] overflow-hidden shadow-2xl">
-            <img 
+            {/* Standard <img> replaced with Next.js <Image /> */}
+            <Image 
               src="/hero-furniture.jpg" 
               alt="Premium Furniture Hero" 
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              fill // Container fill korar jonno
+              priority // LCP fast korar jonno (Hero image-er jonno important)
+              className="object-cover transition-transform duration-700 hover:scale-110"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <motion.div 
