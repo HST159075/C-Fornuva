@@ -43,7 +43,11 @@ export const useCartStore = create<CartState>()(
       },
       
       updateQuantity: (productId, quantity) => {
-        if (quantity < 1) return;
+        if (quantity < 1) {
+          // Auto-remove item when quantity reaches 0
+          set({ items: get().items.filter(item => item.id !== productId) });
+          return;
+        }
         set({
           items: get().items.map(item => 
             item.id === productId ? { ...item, quantity } : item

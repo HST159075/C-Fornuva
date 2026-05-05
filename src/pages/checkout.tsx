@@ -32,8 +32,14 @@ const CheckoutPage = () => {
           productId: item.id,
           quantity: item.quantity
         })),
-        paymentMethod: 'CARD', // Hardcoded for now as per UI
-        shippingAddress: `${data.address}, ${data.city}, ${data.zip}`
+        paymentMethod: 'CARD',
+        shippingAddress: {
+          name: `${data.firstName} ${data.lastName}`,
+          street: data.address,
+          city: data.city,
+          zip: data.zip,
+          country: 'Bangladesh',
+        }
       };
 
       const response = await orderService.createOrder(orderData);
@@ -41,7 +47,8 @@ const CheckoutPage = () => {
       if (response.success) {
         toast.success('Order placed successfully!');
         clearCart();
-        router.push('/dashboard/user/orders');
+        const orderId = response.order?.id || '';
+        router.push(`/order-success${orderId ? `?orderId=${orderId}` : ''}`);
       } else {
         toast.error(response.message || 'Failed to place order');
       }

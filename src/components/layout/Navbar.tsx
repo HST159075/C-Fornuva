@@ -100,7 +100,7 @@ const Navbar = () => {
                 
                 {/* Profile Dropdown */}
                 <div className="absolute right-0 top-full pt-4 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-2xl border border(--border) overflow-hidden">
+                  <div className="bg-white dark:bg-gray-900 rounded-[2rem] shadow-2xl border border-[var(--border)] overflow-hidden">
                     <div className="px-6 py-5 border-b border-[var(--border)] bg-gray-50 dark:bg-gray-800/50">
                       <p className="text-sm font-black truncate dark:text-white">{user?.name}</p>
                       <p className="text-[10px] text-[var(--muted)] truncate font-bold uppercase tracking-widest">{user?.role}</p>

@@ -89,7 +89,15 @@ export const orderService = {
   createOrder: async (orderData: { 
     items: { productId: string; quantity: number }[];
     paymentMethod: string;
-    shippingAddress?: string;
+    shippingAddress?: {
+      name?: string;
+      street?: string;
+      city?: string;
+      state?: string;
+      zip?: string;
+      country?: string;
+      phone?: string;
+    };
   }) => {
     const response = await api.post("/orders", orderData);
     return response.data;

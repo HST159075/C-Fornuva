@@ -13,6 +13,10 @@ import toast from 'react-hot-toast';
 import ProductCard from '@/components/shop/ProductCard';
 
 const ProductDetailsPage = () => {
+  const [reviewRating, setReviewRating] = useState(0);
+  const [reviewHover, setReviewHover] = useState(0);
+  const [reviewComment, setReviewComment] = useState('');
+  const [isSubmittingReview, setIsSubmittingReview] = useState(false);
   const router = useRouter();
   const { id } = router.query;
   const [product, setProduct] = useState<Product | null>(null);
@@ -72,6 +76,40 @@ const ProductDetailsPage = () => {
       setReviews(data);
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const handleSubmitReview = async () => {
+    if (!isAuthenticated) {
+      toast.error('Please login to submit a review');
+      router.push('/auth/login');
+      return;
+    }
+    if (reviewRating === 0) {
+      toast.error('Please select a star rating');
+      return;
+    }
+    if (!reviewComment.trim()) {
+      toast.error('Please write a comment');
+      return;
+    }
+    setIsSubmittingReview(true);
+    try {
+      await reviewService.createReview({
+        productId: product!.id,
+        rating: reviewRating,
+        comment: reviewComment.trim(),
+      });
+      toast.success('Review submitted!');
+      setReviewRating(0);
+      setReviewHover(0);
+      setReviewComment('');
+      await fetchReviews();
+    } catch (err) {
+      const axiosErr = err as { response?: { data?: { message?: string } } };
+      toast.error(axiosErr.response?.data?.message || 'Failed to submit review');
+    } finally {
+      setIsSubmittingReview(false);
     }
   };
 
@@ -245,14 +283,42 @@ const ProductDetailsPage = () => {
                 <h3 className="text-xl font-bold text-center">Add a Review</h3>
                 <div className="space-y-4">
                   <p className="text-sm text-center text-[var(--muted)]">Your rating matters!</p>
-                  <div className="flex justify-center space-x-2 text-yellow-400">
-                    {[1, 2, 3, 4, 5].map((s) => <Star key={s} size={24} className="cursor-pointer" />)}
+                  <div className="flex justify-center space-x-1 text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <button
+                        key={s}
+                        type="button"
+                        onClick={() => setReviewRating(s)}
+                        onMouseEnter={() => setReviewHover(s)}
+                        onMouseLeave={() => setReviewHover(0)}
+                        className="focus:outline-none"
+                      >
+                        <Star
+                          size={28}
+                          fill={(reviewHover || reviewRating) >= s ? 'currentColor' : 'none'}
+                          className="transition-all cursor-pointer hover:scale-110"
+                        />
+                      </button>
+                    ))}
                   </div>
-                  <textarea 
-                    placeholder="Share your thoughts..." 
-                    className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl p-4 text-sm focus:outline-none focus:border-[var(--primary)] min-h-[120px]"
-                  ></textarea>
-                  <button className="btn-primary w-full">Submit Review</button>
+                  {reviewRating > 0 && (
+                    <p className="text-center text-xs font-bold text-[var(--primary)]">
+                      {['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'][reviewRating]}
+                    </p>
+                  )}
+                  <textarea
+                    placeholder="Share your thoughts..."
+                    value={reviewComment}
+                    onChange={(e) => setReviewComment(e.target.value)}
+                    className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl p-4 text-sm focus:outline-none focus:border-[var(--primary)] min-h-[120px] resize-none"
+                  />
+                  <button
+                    onClick={handleSubmitReview}
+                    disabled={isSubmittingReview}
+                    className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {isSubmittingReview ? 'Submitting...' : 'Submit Review'}
+                  </button>
                 </div>
               </div>
             </div>
