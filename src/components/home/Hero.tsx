@@ -52,11 +52,11 @@ const Hero = () => {
             <span className="hero-title inline-block text-[var(--primary)] font-black tracking-[0.4em] uppercase text-[10px] mb-2">
               The Art of Living
             </span>
-            <h1 className="hero-title text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter text-[var(--foreground)]">
+            <h1 className="hero-title text-5xl sm:text-7xl md:text-9xl font-black leading-[0.95] md:leading-[0.9] tracking-tighter text-[var(--foreground)]">
               Luxury <br /> 
               <span className="text-gold italic font-serif font-medium">Redefined</span>
             </h1>
-            <p className="hero-desc text-slate-500 dark:text-slate-400 text-xl max-w-xl leading-relaxed font-medium">
+            <p className="hero-desc text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed font-medium">
               Experience the pinnacle of craftsmanship with our curated collection of artisanal furniture. Designed for those who appreciate the finer things in life.
             </p>
           </div>

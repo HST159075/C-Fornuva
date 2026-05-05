@@ -158,7 +158,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-2xl font-black px-4 py-3 rounded-2xl transition-all ${
+                  className={`text-xl font-black px-4 py-3 rounded-2xl transition-all ${
                     router.pathname === link.href 
                       ? 'text-[var(--primary)] bg-[var(--primary)]/10' 
                       : 'text-[var(--muted)] dark:text-white/50'

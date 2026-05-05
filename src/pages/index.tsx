@@ -350,8 +350,8 @@ const HomePage = () => {
               <div className="space-y-12">
                 <div className="space-y-6">
                   <span className="text-[var(--primary)] font-black tracking-[0.3em] uppercase text-xs">Contact Us</span>
-                  <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-slate-100">Get in Touch</h2>
-                  <p className="text-[var(--muted)] dark:text-white/70 text-xl max-w-lg leading-relaxed">
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-slate-100">Get in Touch</h2>
+                  <p className="text-[var(--muted)] dark:text-white/70 text-lg md:text-xl max-w-lg leading-relaxed">
                     Have questions about our collection or need a custom design? Our team is here to help you.
                   </p>
                 </div>
@@ -410,15 +410,15 @@ const HomePage = () => {
         {/* 10. Final Call to Action */}
         <section className="py-24 bg-[var(--background)] dark:bg-gray-950 reveal-section">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="bg-[var(--primary)] rounded-[5rem] p-12 md:p-32 text-center space-y-10 relative overflow-hidden shadow-2xl">
+            <div className="bg-[var(--primary)] rounded-[3rem] md:rounded-[5rem] p-10 md:p-32 text-center space-y-10 relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/10 rounded-full blur-[150px] -mr-64 -mt-64"></div>
               <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-black/10 rounded-full blur-[120px] -ml-64 -mb-64"></div>
-              <h2 className="text-5xl md:text-8xl font-black text-white relative z-10 tracking-tighter leading-[0.9]">Transform <br /> Your Home.</h2>
-              <p className="text-white/80 text-xl md:text-2xl max-w-2xl mx-auto relative z-10 font-bold leading-relaxed">
+              <h2 className="text-4xl md:text-8xl font-black text-white relative z-10 tracking-tighter leading-[0.9]">Transform <br /> Your Home.</h2>
+              <p className="text-white/80 text-lg md:text-2xl max-w-2xl mx-auto relative z-10 font-bold leading-relaxed">
                 Join 15,000+ happy customers and start creating your dream living space today with FurNova.
               </p>
               <div className="flex justify-center relative z-10 pt-8">
-                <Link href="/shop" className="bg-white text-[var(--secondary)] px-12 py-6 rounded-full font-black text-xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] transition-all flex items-center space-x-4">
+                <Link href="/shop" className="bg-white text-[var(--secondary)] px-10 py-5 md:px-12 md:py-6 rounded-full font-black text-lg md:text-xl hover:scale-110 hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] transition-all flex items-center space-x-4">
                   <span>Start Exploring</span>
                   <ArrowRight size={24} />
                 </Link>
