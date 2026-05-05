@@ -80,12 +80,12 @@ const ShopPage = () => {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && fetchProducts()}
-                  className="pl-12 pr-6 py-3 bg-white border border-[var(--border)] rounded-full focus:outline-none focus:border-[var(--primary)] transition-all w-full md:w-64 shadow-sm"
+                  className="pl-12 pr-6 py-3 bg-white dark:bg-white/5 border border-[var(--border)] dark:border-white/10 rounded-full focus:outline-none focus:border-[var(--primary)] transition-all w-full md:w-64 shadow-sm dark:text-white"
                 />
               </div>
               <button 
                 onClick={() => setIsSidebarOpen(true)}
-                className="md:hidden p-3 bg-white border border-[var(--border)] rounded-full hover:bg-gray-50 transition-colors"
+                className="md:hidden p-3 bg-white dark:bg-white/5 border border-[var(--border)] dark:border-white/10 rounded-full hover:bg-gray-50 dark:hover:bg-white/10 transition-colors dark:text-white"
               >
                 <Menu size={20} />
               </button>
@@ -143,7 +143,7 @@ const ShopPage = () => {
                     <button 
                       key={star}
                       onClick={() => setSelectedRating(star)}
-                      className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-all ${selectedRating === star ? 'bg-[var(--primary)] border-[var(--primary)] text-white shadow-lg' : 'bg-white border-[var(--border)] text-[var(--muted)] hover:border-[var(--primary)]'}`}
+                      className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-all ${selectedRating === star ? 'bg-[var(--primary)] border-[var(--primary)] text-white shadow-lg' : 'bg-white dark:bg-white/5 border-[var(--border)] dark:border-white/10 text-[var(--muted)] hover:border-[var(--primary)] dark:text-white/60'}`}
                     >
                       <span className="font-bold">{star}</span>
                       <Star size={12} className="ml-0.5" fill={selectedRating === star ? "currentColor" : "none"} />
@@ -158,7 +158,7 @@ const ShopPage = () => {
                 <select 
                   value={sort}
                   onChange={(e) => setSort(e.target.value)}
-                  className="w-full bg-white border border-[var(--border)] rounded-xl px-4 py-3 focus:outline-none focus:border-[var(--primary)] text-sm font-medium"
+                  className="w-full bg-white dark:bg-white/5 border border-[var(--border)] dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[var(--primary)] text-sm font-medium dark:text-white"
                 >
                   <option value="createdAt_desc">Newest First</option>
                   <option value="price_asc">Price: Low to High</option>
@@ -222,11 +222,11 @@ const ShopPage = () => {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              className="fixed top-0 right-0 w-80 h-full bg-white z-[70] p-8 shadow-2xl overflow-y-auto"
+              className="fixed top-0 right-0 w-80 h-full bg-white dark:bg-gray-900 z-[70] p-8 shadow-2xl overflow-y-auto"
             >
               <div className="flex items-center justify-between mb-10">
-                <h2 className="text-2xl font-bold">Filters</h2>
-                <button onClick={() => setIsSidebarOpen(false)}><X size={24} /></button>
+                <h2 className="text-2xl font-bold dark:text-white">Filters</h2>
+                <button onClick={() => setIsSidebarOpen(false)} className="dark:text-white"><X size={24} /></button>
               </div>
               {/* Mobile filters same as desktop but stacked */}
               <div className="space-y-12">

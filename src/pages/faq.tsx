@@ -54,11 +54,11 @@ const FAQPage = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-sm font-bold dark:text-white">
                     <Headphones size={20} className="text-[var(--primary)]" />
-                    <span>+880 1234 567890</span>
+                    <span>01887238025</span>
                   </div>
                   <div className="flex items-center space-x-3 text-sm font-bold dark:text-white">
                     <ShieldCheck size={20} className="text-[var(--primary)]" />
-                    <span>support@furnova.com</span>
+                    <span>hsttasin90@gmail.com</span>
                   </div>
                 </div>
                 <button className="btn-primary w-full !py-4 text-sm">Contact Us</button>

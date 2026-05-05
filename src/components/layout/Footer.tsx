@@ -55,15 +55,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-[var(--primary)] shrink-0" />
-                <span>123 Furniture St, Design District, Dhaka 1212</span>
+                <span>Hathazari, Chattogram, Bangladesh (4336)</span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-gray-400">
                 <Phone size={18} className="text-[var(--primary)] shrink-0" />
-                <span>+880 1234 567890</span>
+                <span>01887238025</span>
               </li>
               <li className="flex items-center space-x-3 text-sm text-gray-400">
                 <Mail size={18} className="text-[var(--primary)] shrink-0" />
-                <span>support@furnova.com</span>
+                <span>hsttasin90@gmail.com</span>
               </li>
             </ul>
           </div>

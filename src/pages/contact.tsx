@@ -66,8 +66,8 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Our Studio</h3>
                     <p className="text-[var(--muted)] leading-relaxed">
-                      123 Furniture St, Design District <br />
-                      Dhaka 1212, Bangladesh
+                      Hathazari, Chattogram <br />
+                      Bangladesh (4336)
                     </p>
                   </div>
                 </div>
@@ -78,8 +78,8 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Call Us</h3>
                     <p className="text-[var(--muted)] leading-relaxed">
-                      Main Office: +880 1234 567890 <br />
-                      Support: +880 1122 334455
+                      Main: 01887238025 <br />
+                      Support: +8801887238025
                     </p>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Email Us</h3>
                     <p className="text-[var(--muted)] leading-relaxed">
-                      info@furnova.com <br />
+                      hsttasin90@gmail.com <br />
                       support@furnova.com
                     </p>
                   </div>
