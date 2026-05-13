@@ -32,7 +32,7 @@
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Core:** Next.js 14 (TypeScript)
@@ -63,6 +63,9 @@ FurNova/
     ├── prisma/           # Database Schema & Migrations
     ├── src/modules/      # Modular Route Handlers
     └── src/lib/          # DB & Auth Configurations
+
+---
+
 ## Setup & Installation
 Prerequisites
 Node.js 18+
