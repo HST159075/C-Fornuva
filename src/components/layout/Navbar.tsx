@@ -54,7 +54,7 @@ const Navbar = () => {
       } ${
         isScrolled 
           ? 'py-4 glass-premium mx-auto mt-4 rounded-[2.5rem] !w-[95%] left-1/2 -translate-x-1/2 shadow-2xl' 
-          : 'py-8 bg-white/95 dark:bg-transparent backdrop-blur-md border-b border-black/5'
+          : 'py-8 bg-[#0A261F]/60 dark:bg-transparent backdrop-blur-md border-b border-white/5'
       }`}
     >
       <div className="container mx-auto px-6 md:px-10 flex items-center justify-between">
