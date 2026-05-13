@@ -1,40 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  FurNova — Premium Full-Stack E-Commerce Ecosystem
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" />
+  <img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Stripe-Payments-635BFF?style=for-the-badge&logo=stripe&logoColor=white" />
+</p>
 
-First, run the development server:
+**FurNova** is a sophisticated, high-performance e-commerce platform built for a premium shopping experience. It features a modern tech stack, multi-role management (Admin, Manager, User), real-time inventory tracking, and seamless payment integration.
 
-```bash
+---
+
+##  Key Features
+
+###  Customer Experience
+- **Premium UI/UX:** Built with a "Luxury Modern" aesthetic using GSAP animations and Framer Motion transitions.
+- **Persistent Cart & Wishlist:** Shopping data is synchronized with the database, allowing users to access their items across devices.
+- **Advanced Filtering:** Real-time product searching, category-based filtering, and price range sorting.
+- **Secure Checkout:** Integrated **Stripe** for global secure payment processing.
+- **Responsive Design:** Fully optimized for Mobile, Tablet, and Desktop.
+
+###  Multi-Role Management
+- **Admin Dashboard:** Full control over users, inventory, sales analytics, and system settings.
+- **Manager Dashboard:** Specialized access to manage products, categories, and order fulfillment.
+- **User Dashboard:** Order history tracking, profile management, and wishlist access.
+
+###  Advanced Analytics
+- Real-time revenue tracking and order status visualization using **Recharts**.
+- Comprehensive inventory management with low-stock alerts.
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- **Core:** Next.js 14 (TypeScript)
+- **Styling:** Tailwind CSS + Lucide Icons
+- **Animations:** GSAP (ScrollTrigger) + Framer Motion
+- **State Management:** Zustand (Global State)
+- **Data Fetching:** Axios + TanStack Query
+
+### Backend
+- **Runtime:** Node.js (ES Modules)
+- **Framework:** Express.js
+- **Database:** PostgreSQL (Hosted on Neon/Supabase)
+- **ORM:** Prisma ORM (Type-safe queries)
+- **Authentication:** Better-Auth (Social + Email Login)
+- **Security:** Zod (Validation) + CORS + Express-Validator
+
+---
+
+##  Project Structure
+
+```text
+FurNova/
+├── frontend/             # Next.js Application
+│   ├── src/components/   # Reusable UI components
+│   ├── src/pages/        # Routing and Page Logic
+│   └── src/store/        # Zustand State Management
+└── backend/              # Express API
+    ├── prisma/           # Database Schema & Migrations
+    ├── src/modules/      # Modular Route Handlers
+    └── src/lib/          # DB & Auth Configurations
+## Setup & Installation
+Prerequisites
+Node.js 18+
+PostgreSQL Database
+Stripe Account (API Keys)
+1. Clone the Project
+bash
+git clone https://github.com/HST159075/FurNova.git
+cd FurNova
+2. Backend Setup
+bash
+cd backend
+npm install
+cp .env.example .env      # Fill in your DB_URL, STRIPE_KEY, BETTER_AUTH_SECRET
+npm run db:push           # Sync database schema
+npm run dev               # Start development server
+3. Frontend Setup
+bash
+cd ../frontend
+npm install
+cp .env.local.example .env.local   # Add API and Stripe Public Keys
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h2> Contact & Support </h2>
+<br>
+Developer: Tasinul Alam
+<br>
+Email: hsttasin90@gmail.com
+<br>
+LinkedIn: MD Tasinul Alam
+<br>
+Portfolio: tasin-portfolio.vercel.app
+<br>
+<h1>⭐ If you like this project, please give it a star!</h1>
