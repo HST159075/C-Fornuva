@@ -27,8 +27,8 @@ const AdminProductsPage = () => {
       <div className="space-y-10 pb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold dark:text-white">Product Management</h1>
-            <p className="text-[var(--muted)] font-medium">Manage your furniture catalog and inventory.</p>
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white">Product Management</h1>
+            <p className="text-slate-500 dark:text-[var(--muted)] font-medium">Manage your furniture catalog and inventory.</p>
           </div>
           <button className="btn-primary flex items-center space-x-3 !py-3 !px-8">
             <Plus size={20} />
@@ -38,7 +38,7 @@ const AdminProductsPage = () => {
 
         <div className="bg-white dark:bg-gray-900 rounded-[3rem] border border-[var(--border)] shadow-sm overflow-hidden transition-colors">
           <div className="p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[var(--border)]">
-            <h3 className="text-xl font-bold dark:text-white">Catalog List</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Catalog List</h3>
             <div className="flex items-center space-x-4">
               <div className="bg-gray-100 dark:bg-gray-800 rounded-xl px-6 py-2.5 flex items-center space-x-3 w-80">
                 <Search size={18} className="text-gray-400" />
@@ -75,16 +75,16 @@ const AdminProductsPage = () => {
                             <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover" />
                           </div>
                           <div>
-                            <p className="text-sm font-bold dark:text-white">{p.name}</p>
+                            <p className="text-sm font-bold text-slate-900 dark:text-white">{p.name}</p>
                             <p className="text-[10px] text-[var(--muted)] uppercase font-bold tracking-widest">#{p.id.slice(-6).toUpperCase()}</p>
                           </div>
                         </div>
                       </td>
                       <td className="p-6 text-sm font-medium text-[var(--muted)]">{p.category?.name}</td>
-                      <td className="p-6 font-bold text-sm dark:text-white">${Number(p.price).toFixed(2)}</td>
+                      <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">${Number(p.price).toFixed(2)}</td>
                       <td className="p-6">
                         <div className="flex flex-col space-y-1">
-                          <span className="text-sm font-bold dark:text-white">{p.stock} units</span>
+                          <span className="text-sm font-bold text-slate-900 dark:text-white">{p.stock} units</span>
                           <div className="w-24 h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                             <div className={`h-full ${p.stock < 10 ? 'bg-red-500' : 'bg-green-500'}`} style={{ width: `${Math.min(p.stock * 2, 100)}%` }}></div>
                           </div>
