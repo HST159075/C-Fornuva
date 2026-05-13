@@ -80,8 +80,8 @@ const ProfilePage = () => {
                   <div className="absolute bottom-0 right-0 w-8 h-8 bg-green-500 border-4 border-white rounded-full"></div>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold">{user.name || 'User'}</h2>
-                  <p className="text-sm text-[var(--muted)] font-medium">{user.email}</p>
+                  <h2 className="text-2xl font-black text-slate-900">{user.name || 'User'}</h2>
+                  <p className="text-sm text-slate-500 font-medium">{user.email}</p>
                 </div>
                 <div className="pt-6 border-t border-[var(--border)]">
                   <span className="px-4 py-1.5 bg-green-100 text-green-600 text-[10px] font-bold rounded-full uppercase tracking-wider">
@@ -131,8 +131,8 @@ const ProfilePage = () => {
                     className="space-y-8"
                   >
                     <div className="flex items-end justify-between">
-                      <h2 className="text-3xl font-bold">Order History</h2>
-                      <p className="text-sm text-[var(--muted)] font-medium">Total {orders.length} orders found</p>
+                      <h2 className="text-3xl font-black text-white">Order History</h2>
+                      <p className="text-sm text-white/60 font-medium">Total {orders.length} orders found</p>
                     </div>
 
                     {orders.length > 0 ? (
@@ -144,9 +144,9 @@ const ProfilePage = () => {
                                 <ShoppingBag size={28} />
                               </div>
                               <div>
-                                <p className="text-xs text-[var(--muted)] font-bold uppercase tracking-widest">Order ID</p>
-                                <h3 className="text-lg font-bold">#{order.id.slice(-8).toUpperCase()}</h3>
-                                <p className="text-sm text-[var(--muted)] font-medium">{new Date(order.createdAt).toLocaleDateString()}</p>
+                                <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">Order ID</p>
+                                <h3 className="text-lg font-black text-slate-900">#{order.id.slice(-8).toUpperCase()}</h3>
+                                <p className="text-sm text-slate-500 font-medium">{new Date(order.createdAt).toLocaleDateString()}</p>
                               </div>
                             </div>
                             
@@ -189,10 +189,10 @@ const ProfilePage = () => {
                     exit={{ opacity: 0, x: -20 }}
                     className="bg-white p-12 rounded-[4rem] border border-[var(--border)] space-y-12"
                   >
-                    <h2 className="text-3xl font-bold">Account Settings</h2>
+                    <h2 className="text-3xl font-black text-slate-900">Account Settings</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-[var(--muted)]">Full Name</label>
+                        <label className="text-sm font-bold text-slate-500">Full Name</label>
                         <input 
                           type="text" 
                           value={name}
@@ -201,7 +201,7 @@ const ProfilePage = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-[var(--muted)]">Email Address</label>
+                        <label className="text-sm font-bold text-slate-500">Email Address</label>
                         <input type="email" defaultValue={user.email} disabled className="w-full bg-gray-50 border border-[var(--border)] rounded-2xl px-6 py-4 text-[var(--muted)] font-medium cursor-not-allowed" />
                       </div>
                     </div>
