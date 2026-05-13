@@ -62,7 +62,7 @@ const CheckoutPage = () => {
     <Layout title="Checkout | FurNova">
       <div className="bg-[var(--background)] min-h-screen pt-12 pb-24">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-4xl font-bold mb-12 text-center">Secure Checkout</h1>
+          <h1 className="text-4xl font-black mb-12 text-center text-white">Secure Checkout</h1>
 
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-12 max-w-7xl mx-auto">
             {/* Checkout Form */}
@@ -71,7 +71,7 @@ const CheckoutPage = () => {
               <div className="bg-white p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm space-y-8">
                 <div className="flex items-center space-x-4 pb-6 border-b border-[var(--border)]">
                   <div className="w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-bold">1</div>
-                  <h2 className="text-2xl font-bold">Shipping Information</h2>
+                  <h2 className="text-2xl font-black text-slate-900">Shipping Information</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@ const CheckoutPage = () => {
               <div className="bg-white p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm space-y-8">
                 <div className="flex items-center space-x-4 pb-6 border-b border-[var(--border)]">
                   <div className="w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-bold">2</div>
-                  <h2 className="text-2xl font-bold">Payment Method</h2>
+                  <h2 className="text-2xl font-black text-slate-900">Payment Method</h2>
                 </div>
                 
                 <div className="bg-[var(--background)] p-6 rounded-3xl border border-[var(--primary)] flex items-center justify-between">
@@ -118,16 +118,16 @@ const CheckoutPage = () => {
 
                 <div className="space-y-6 pt-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-[var(--muted)]">Card Number</label>
+                    <label className="text-sm font-bold text-slate-500">Card Number</label>
                     <input type="text" placeholder="XXXX XXXX XXXX XXXX" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)]" />
                   </div>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-[var(--muted)]">Expiry Date</label>
+                      <label className="text-sm font-bold text-slate-500">Expiry Date</label>
                       <input type="text" placeholder="MM/YY" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)]" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-[var(--muted)]">CVV</label>
+                      <label className="text-sm font-bold text-slate-500">CVV</label>
                       <input type="text" placeholder="123" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)]" />
                     </div>
                   </div>
@@ -138,7 +138,7 @@ const CheckoutPage = () => {
             {/* Right Sidebar - Sticky Summary */}
             <div className="xl:col-span-1 space-y-8">
               <div className="bg-white p-10 rounded-[3rem] border border-[var(--border)] shadow-xl sticky top-32 space-y-8">
-                <h3 className="text-2xl font-bold pb-6 border-b border-[var(--border)]">Your Order</h3>
+                <h3 className="text-2xl font-black text-slate-900 pb-6 border-b border-[var(--border)]">Your Order</h3>
                 
                 <div className="max-h-60 overflow-y-auto space-y-4 custom-scrollbar">
                   {items.map((item) => (
@@ -165,7 +165,7 @@ const CheckoutPage = () => {
                     <span className="text-green-500 font-bold uppercase tracking-wider text-xs">Free</span>
                   </div>
                   <div className="flex justify-between items-end pt-4">
-                    <span className="text-lg font-bold">Grand Total</span>
+                    <span className="text-lg font-bold text-slate-900">Grand Total</span>
                     <span className="text-3xl font-bold text-[var(--primary)]">${totalPrice().toFixed(2)}</span>
                   </div>
                 </div>
