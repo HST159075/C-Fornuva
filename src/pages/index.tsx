@@ -107,7 +107,7 @@ const HomePage = () => {
                   <div className="text-[var(--primary)] bg-[var(--primary)]/10 w-20 h-20 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500 shadow-lg mb-8 mx-auto">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-black mb-4 text-slate-900 dark:text-slate-100">{feature.title}</h3>
+                  <h3 className="text-2xl font-black mb-4 text-white">{feature.title}</h3>
                   <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">{feature.desc}</p>
                 </motion.div>
               ))}
@@ -121,7 +121,9 @@ const HomePage = () => {
             <div className="flex items-end justify-between mb-12">
               <div className="space-y-4">
                 <span className="text-[var(--primary)] font-black tracking-[0.3em] uppercase text-[10px]">Categories</span>
-                <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-slate-100">Browse by <span className="text-gold italic">Category</span></h2>
+                <h2 className="text-5xl md:text-8xl font-black tracking-tighter text-white mb-8">
+                Browse by <span className="text-gold italic font-serif font-medium">Category</span>
+              </h2>
               </div>
               <Link href="/categories" className="group text-[var(--primary)] font-bold flex items-center hover:translate-x-2 transition-transform">
                 View All <ArrowRight size={18} className="ml-2" />
@@ -217,7 +219,7 @@ const HomePage = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto space-y-6 mb-20">
               <span className="text-[var(--primary)] font-black tracking-[0.3em] uppercase text-xs">Customer Stories</span>
-              <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-slate-100">Trusted by <span className="text-gold">Architects</span></h2>
+              <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-white">Trusted by <span className="text-gold">Architects</span></h2>
               <div className="w-24 h-1 bg-[var(--primary)] mx-auto rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
