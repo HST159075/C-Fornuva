@@ -59,8 +59,8 @@ const AdminDashboard = () => {
         {/* Page Title */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold dark:text-white">Analytics Overview</h1>
-            <p className="text-[var(--muted)] font-medium">Welcome back, Admin. Here&apos;s what&apos;s happening today.</p>
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white">Analytics Overview</h1>
+            <p className="text-slate-500 dark:text-[var(--muted)] font-medium">Welcome back, Admin. Here&apos;s what&apos;s happening today.</p>
           </div>
           <div className="flex items-center space-x-3">
             <span className="text-sm font-bold bg-white dark:bg-gray-800 px-4 py-2 rounded-xl border border-[var(--border)] dark:text-white">Last 30 Days</span>
@@ -84,8 +84,8 @@ const AdminDashboard = () => {
                 </div>
                 <span className="text-xs font-bold text-green-500 bg-green-50 dark:bg-green-500/10 px-2.5 py-1 rounded-full">{stat.change}</span>
               </div>
-              <p className="text-sm font-bold text-[var(--muted)] mb-1 uppercase tracking-widest">{stat.label}</p>
-              <h3 className="text-3xl font-black dark:text-white">{stat.value}</h3>
+              <p className="text-sm font-bold text-slate-500 dark:text-[var(--muted)] mb-1 uppercase tracking-widest">{stat.label}</p>
+              <h3 className="text-3xl font-black text-slate-900 dark:text-white">{stat.value}</h3>
             </motion.div>
           ))}
         </div>
@@ -95,11 +95,11 @@ const AdminDashboard = () => {
           {/* Main Chart */}
           <div className="xl:col-span-2 bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm">
             <div className="flex items-center justify-between mb-10">
-              <h3 className="text-xl font-bold dark:text-white">Revenue Analytics</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Revenue Analytics</h3>
               <div className="flex items-center space-x-6 text-xs font-bold uppercase tracking-widest">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 rounded-full bg-[var(--primary)]"></div>
-                  <span className="dark:text-white">Revenue</span>
+                  <span className="text-slate-900 dark:text-white">Revenue</span>
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ const AdminDashboard = () => {
 
           {/* Pie Chart (Simulated from Orders by Status) */}
           <div className="xl:col-span-1 bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm flex flex-col">
-            <h3 className="text-xl font-bold dark:text-white mb-10">Orders by Status</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-10">Orders by Status</h3>
             <div className="flex-grow flex items-center justify-center">
               <ResponsiveContainer width="100%" height={250}>
                 <PieChart>
@@ -163,7 +163,7 @@ const AdminDashboard = () => {
               {stats.ordersByStatus.map((item, idx) => (
                 <div key={idx} className="flex items-center space-x-3">
                   <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: COLORS[idx % COLORS.length] }}></div>
-                  <span className="text-[10px] font-bold dark:text-white whitespace-nowrap uppercase tracking-widest">{item.status}</span>
+                  <span className="text-[10px] font-bold text-slate-900 dark:text-white whitespace-nowrap uppercase tracking-widest">{item.status}</span>
                 </div>
               ))}
             </div>
@@ -173,7 +173,7 @@ const AdminDashboard = () => {
         {/* Recent Orders Table */}
         <div className="bg-white dark:bg-gray-900 rounded-[3rem] border border-[var(--border)] shadow-sm overflow-hidden transition-colors">
           <div className="p-10 flex items-center justify-between border-b border-[var(--border)]">
-            <h3 className="text-xl font-bold dark:text-white">Recent Transactions</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Recent Transactions</h3>
             <div className="flex items-center space-x-4">
               <button className="text-sm font-bold text-[var(--primary)] hover:underline">View All</button>
             </div>
@@ -193,16 +193,16 @@ const AdminDashboard = () => {
               <tbody className="divide-y divide-[var(--border)]">
                 {recentOrders.map((order, idx) => (
                   <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                    <td className="p-6 font-bold text-sm dark:text-white">#{order.id.slice(-6).toUpperCase()}</td>
+                    <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">#{order.id.slice(-6).toUpperCase()}</td>
                     <td className="p-6">
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full flex items-center justify-center text-[10px] font-bold">
                           {order.user?.name?.charAt(0) || 'U'}
                         </div>
-                        <span className="text-sm font-bold dark:text-white">{order.user?.name}</span>
+                        <span className="text-sm font-bold text-slate-900 dark:text-white">{order.user?.name}</span>
                       </div>
                     </td>
-                    <td className="p-6 font-bold text-sm dark:text-white">${Number(order.totalPrice).toFixed(2)}</td>
+                    <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">${Number(order.totalPrice).toFixed(2)}</td>
                     <td className="p-6 text-xs font-bold uppercase tracking-widest text-[var(--muted)]">
                       {order.isPaid ? (
                         <span className="text-green-500 flex items-center gap-1">

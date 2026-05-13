@@ -70,8 +70,8 @@ const UserDashboard = () => {
                 {stat.icon}
               </div>
               <div>
-                <p className="text-xs font-bold text-[var(--muted)] uppercase tracking-widest">{stat.label}</p>
-                <h3 className="text-2xl font-black dark:text-white">{stat.value}</h3>
+                <p className="text-xs font-bold text-slate-500 dark:text-[var(--muted)] uppercase tracking-widest">{stat.label}</p>
+                <h3 className="text-2xl font-black text-slate-900 dark:text-white">{stat.value}</h3>
               </div>
             </motion.div>
           ))}
@@ -83,7 +83,7 @@ const UserDashboard = () => {
           {/* Recent Orders List */}
           <div className="xl:col-span-2 bg-white dark:bg-gray-900 p-10 rounded-[3rem] border border-[var(--border)] space-y-8">
             <div className="flex items-center justify-between">
-              <h3 className="text-2xl font-bold dark:text-white">Recent Orders</h3>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Recent Orders</h3>
               <Link href="/dashboard/user/orders" className="text-sm font-bold text-[var(--primary)] hover:underline">See All</Link>
             </div>
             
@@ -100,15 +100,15 @@ const UserDashboard = () => {
                         <ShoppingBag size={24} />
                       </div>
                       <div className="flex-grow">
-                        <h4 className="font-bold dark:text-white">Order #{order.id.slice(-6).toUpperCase()}</h4>
-                        <p className="text-xs text-[var(--muted)] font-medium">
+                        <h4 className="font-bold text-white">Order #{order.id.slice(-6).toUpperCase()}</h4>
+                        <p className="text-xs text-white/60 font-medium">
                           {new Date(order.createdAt).toLocaleDateString()} • {orderLineItems(order).length} items
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center justify-between w-full md:w-auto gap-8">
                       <div className="text-center md:text-right">
-                        <p className="font-black dark:text-white">${orderTotalAmount(order).toFixed(2)}</p>
+                        <p className="font-black text-white">${orderTotalAmount(order).toFixed(2)}</p>
                         <span className={`text-[10px] font-bold uppercase tracking-widest ${
                           order.status === 'DELIVERED' ? 'text-green-500' : 'text-blue-500'
                         }`}>
@@ -132,7 +132,7 @@ const UserDashboard = () => {
           {/* Activity/Support Sidebar */}
           <div className="space-y-8">
             <div className="bg-white dark:bg-gray-900 p-10 rounded-[3rem] border border-[var(--border)] space-y-8">
-              <h3 className="text-xl font-bold dark:text-white">Order Updates</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Order Updates</h3>
               <div className="space-y-6">
                 {orders.length > 0 ? (
                   <div className="flex items-start space-x-4">
@@ -140,8 +140,8 @@ const UserDashboard = () => {
                       <Truck size={20} />
                     </div>
                     <div>
-                      <p className="text-sm font-bold dark:text-white">Latest Order Status</p>
-                      <p className="text-xs text-[var(--muted)] font-medium">Your order #{orders[0].id.slice(-6).toUpperCase()} is currently {orders[0].status.toLowerCase()}.</p>
+                      <p className="text-sm font-bold text-slate-900 dark:text-white">Latest Order Status</p>
+                      <p className="text-xs text-slate-500 dark:text-[var(--muted)] font-medium">Your order #{orders[0].id.slice(-6).toUpperCase()} is currently {orders[0].status.toLowerCase()}.</p>
                     </div>
                   </div>
                 ) : (
@@ -150,8 +150,8 @@ const UserDashboard = () => {
                       <ShieldCheck size={20} />
                     </div>
                     <div>
-                      <p className="text-sm font-bold dark:text-white">Welcome!</p>
-                      <p className="text-xs text-[var(--muted)] font-medium">Start shopping to see your order updates here.</p>
+                      <p className="text-sm font-bold text-slate-900 dark:text-white">Welcome!</p>
+                      <p className="text-xs text-slate-500 dark:text-[var(--muted)] font-medium">Start shopping to see your order updates here.</p>
                     </div>
                   </div>
                 )}
