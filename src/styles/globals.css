@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --primary: #C5A059; /* Champagne Gold */
+  --primary: #C5A059; 
   --primary-dark: #A68646;
   --secondary: #0A261F; /* Deep Emerald */
-  --background: #0A261F; /* Deep Emerald */
+  --background: #0A261F; 
   --foreground: #FDFCF0; /* Cream Pearl */
   --muted: #6B7280;
   --border: rgba(255, 255, 255, 0.1);
