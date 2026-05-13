@@ -15,7 +15,7 @@ const CartPage = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="space-y-4">
               <span className="text-[var(--primary)] font-semibold tracking-widest uppercase text-xs">Your Selection</span>
-              <h1 className="text-4xl md:text-5xl font-bold">Shopping Cart</h1>
+              <h1 className="text-4xl md:text-5xl font-black text-white">Shopping Cart</h1>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const CartPage = () => {
               {/* Order Summary */}
               <div className="xl:col-span-1">
                 <div className="bg-white p-10 rounded-[3rem] border border-[var(--border)] shadow-xl sticky top-32 space-y-8">
-                  <h3 className="text-2xl font-bold pb-6 border-b border-[var(--border)]">Order Summary</h3>
+                  <h3 className="text-2xl font-black text-slate-900 pb-6 border-b border-[var(--border)]">Order Summary</h3>
                   
                   <div className="space-y-4">
                     <div className="flex justify-between text-[var(--muted)] font-medium">
@@ -106,7 +106,7 @@ const CartPage = () => {
 
                   <div className="pt-6 border-t border-[var(--border)] space-y-6">
                     <div className="flex justify-between items-end">
-                      <span className="text-lg font-bold">Total Amount</span>
+                      <span className="text-lg font-bold text-slate-900">Total Amount</span>
                       <span className="text-4xl font-bold text-[var(--primary)]">${Number(totalPrice()).toFixed(2)}</span>
                     </div>
                     <Link href="/checkout" className="btn-primary w-full !py-5 flex items-center justify-center space-x-3 text-lg">
@@ -134,8 +134,8 @@ const CartPage = () => {
                 🛒
               </div>
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold">Your cart is empty</h2>
-                <p className="text-[var(--muted)] max-w-sm mx-auto text-lg leading-relaxed">
+                <h2 className="text-4xl font-black text-slate-900">Your cart is empty</h2>
+                <p className="text-slate-500 max-w-sm mx-auto text-lg leading-relaxed">
                    Looks like you haven&apos;t added anything yet. Explore our collection and find something you love.
                 </p>
               </div>
