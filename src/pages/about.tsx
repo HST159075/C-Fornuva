@@ -11,9 +11,9 @@ const AboutPage = () => {
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1556912177-f547c12dd0ee?auto=format&fit=crop&q=80&w=1600" 
+            src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=1600" 
             className="absolute inset-0 w-full h-full object-cover"
-            alt="About FurNova"
+            alt=""
           />
           <div className="relative z-20 text-center space-y-6 container mx-auto px-4">
             <motion.span 
@@ -72,11 +72,11 @@ const AboutPage = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-white text-slate-900">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-4 mb-16">
-              <h2 className="text-4xl font-bold">Why Choose Us</h2>
-              <p className="text-[var(--muted)] max-w-xl mx-auto">We are committed to excellence in every aspect of our business.</p>
+              <h2 className="text-4xl font-bold text-slate-900">Why Choose Us</h2>
+              <p className="text-slate-600 max-w-xl mx-auto">We are committed to excellence in every aspect of our business.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[

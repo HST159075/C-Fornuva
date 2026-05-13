@@ -67,7 +67,7 @@ const LoginPage = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-md w-full space-y-8 bg-white p-10 rounded-[2rem] shadow-xl border border-[var(--border)]"
+          className="max-w-md w-full space-y-8 bg-white p-10 rounded-[2rem] shadow-xl border border-[var(--border)] text-slate-600"
         >
           <div className="text-center">
             <h2 className="text-3xl font-bold text-[var(--secondary)]">Welcome Back</h2>
@@ -85,7 +85,7 @@ const LoginPage = () => {
                   <input
                     {...register('email', { required: 'Email is required' })}
                     type="email"
-                    className="block w-full pl-10 pr-3 py-3 border border-[var(--border)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)] transition-all"
+                    className="block w-full pl-10 pr-3 py-3 border border-[var(--border)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)] transition-all text-slate-600"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -101,7 +101,7 @@ const LoginPage = () => {
                   <input
                     {...register('password', { required: 'Password is required', minLength: { value: 6, message: 'Min 6 characters' } })}
                     type="password"
-                    className="block w-full pl-10 pr-3 py-3 border border-[var(--border)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)] transition-all"
+                    className="block w-full pl-10 pr-3 py-3 border border-[var(--border)] rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20 focus:border-[var(--primary)] transition-all text-slate-600"
                     placeholder="••••••••"
                   />
                 </div>

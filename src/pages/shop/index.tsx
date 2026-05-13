@@ -143,7 +143,7 @@ const ShopPage = () => {
                     <button 
                       key={star}
                       onClick={() => setSelectedRating(star)}
-                      className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-all ${selectedRating === star ? 'bg-[var(--primary)] border-[var(--primary)] text-white shadow-lg' : 'bg-white dark:bg-white/5 border-[var(--border)] dark:border-white/10 text-[var(--muted)] hover:border-[var(--primary)] dark:text-white/60'}`}
+                      className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-all ${selectedRating === star ? 'bg-[var(--primary)] border-[var(--primary)] text-white shadow-lg' : 'bg-white dark:bg-white/5 border-[var(--border)] dark:border-white/10 text-slate-600 hover:border-[var(--primary)] dark:text-white/60'}`}
                     >
                       <span className="font-bold">{star}</span>
                       <Star size={12} className="ml-0.5" fill={selectedRating === star ? "currentColor" : "none"} />
@@ -224,9 +224,9 @@ const ShopPage = () => {
               exit={{ x: '100%' }}
               className="fixed top-0 right-0 w-80 h-full bg-white dark:bg-gray-900 z-[70] p-8 shadow-2xl overflow-y-auto"
             >
-              <div className="flex items-center justify-between mb-10">
-                <h2 className="text-2xl font-bold dark:text-white">Filters</h2>
-                <button onClick={() => setIsSidebarOpen(false)} className="dark:text-white"><X size={24} /></button>
+              <div className="flex items-center justify-between mb-10 text-slate-900 dark:text-white">
+                <h2 className="text-2xl font-bold">Filters</h2>
+                <button onClick={() => setIsSidebarOpen(false)}><X size={24} /></button>
               </div>
               {/* Mobile filters same as desktop but stacked */}
               <div className="space-y-12">

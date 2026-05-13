@@ -46,17 +46,17 @@ const FAQPage = () => {
             
             {/* Sidebar Contact */}
             <div className="lg:col-span-1 space-y-8">
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] border border-[var(--border)] shadow-sm space-y-6">
-                <h3 className="text-xl font-bold dark:text-white">Still need help?</h3>
-                <p className="text-sm text-[var(--muted)] leading-relaxed">
+              <div className="bg-white dark:bg-gray-900 p-8 rounded-[2.5rem] border border-[var(--border)] shadow-sm space-y-6 text-slate-600">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Still need help?</h3>
+                <p className="text-sm text-slate-500 dark:text-[var(--muted)] leading-relaxed">
                   Can&apos;t find what you&apos;re looking for? Our support team is available 24/7.
                 </p>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-sm font-bold dark:text-white">
+                  <div className="flex items-center space-x-3 text-sm font-bold text-slate-900 dark:text-white">
                     <Headphones size={20} className="text-[var(--primary)]" />
                     <span>01887238025</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-sm font-bold dark:text-white">
+                  <div className="flex items-center space-x-3 text-sm font-bold text-slate-900 dark:text-white">
                     <ShieldCheck size={20} className="text-[var(--primary)]" />
                     <span>hsttasin90@gmail.com</span>
                   </div>
@@ -80,7 +80,7 @@ const FAQPage = () => {
                   <h2 className="text-2xl font-bold dark:text-white border-b border-[var(--border)] pb-4">{section.category}</h2>
                   <div className="space-y-4">
                     {section.items.map((item, iIdx) => (
-                      <details key={iIdx} className="group bg-white dark:bg-gray-900 rounded-3xl border border-[var(--border)] transition-all overflow-hidden">
+                      <details key={iIdx} className="group bg-white dark:bg-gray-900 rounded-3xl border border-[var(--border)] transition-all overflow-hidden text-slate-900 dark:text-white">
                         <summary className="flex items-center justify-between p-8 font-bold cursor-pointer list-none dark:text-white">
                           <span>{item.q}</span>
                           <span className="group-open:rotate-180 transition-transform duration-300">

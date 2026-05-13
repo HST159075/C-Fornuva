@@ -320,11 +320,11 @@ const HomePage = () => {
                 <div key={i} className="group cursor-pointer space-y-8">
                   <div className="aspect-[4/5] rounded-[3.5rem] overflow-hidden relative shadow-2xl">
                     <img 
-                      src={`https://images.unsplash.com/photo-${i === 1 ? '1618221195710-dd6b41faaea6' : i === 2 ? '1616489953149-8d80e82977cc' : '1616137422495-1e902b7ecbb7'}?auto=format&fit=crop&q=80&w=800`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                      alt="Blog post"
+                      src={`https://images.unsplash.com/photo-${i === 1 ? '1616489953149-8d80e82977cc' : i === 2 ? '1586023492125-27b2c045efd7' : '1556228453-efd6c1ff04f6'}?auto=format&fit=crop&q=80&w=800`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 bg-slate-800"
+                      alt=""
                     />
-                    <div className="absolute top-8 left-8 px-6 py-2 bg-white/90 backdrop-blur-xl text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">Design Trends</div>
+                    <div className="absolute top-8 left-8 px-6 py-2 bg-white/90 backdrop-blur-xl text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg text-slate-900">Design Trends</div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <div className="space-y-4 px-2">

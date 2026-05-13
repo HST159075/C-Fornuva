@@ -27,23 +27,23 @@ const ContactPage = () => {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="bg-white p-10 md:p-16 rounded-[3rem] border border-[var(--border)] shadow-xl space-y-10"
+              className="bg-white p-10 md:p-16 rounded-[3rem] border border-[var(--border)] shadow-xl space-y-10 text-slate-600"
             >
-              <h2 className="text-3xl font-bold">Send a Message</h2>
+              <h2 className="text-3xl font-black text-slate-900">Send a Message</h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-[var(--muted)]">Your Name</label>
-                    <input required type="text" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
+                    <input required type="text" className="w-full bg-gray-50 border border-gray-200 text-slate-900 rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-[var(--muted)]">Email Address</label>
-                    <input required type="email" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
+                    <input required type="email" className="w-full bg-gray-50 border border-gray-200 text-slate-900 rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-[var(--muted)]">Subject</label>
-                  <input required type="text" className="w-full bg-[var(--background)] border border-[var(--border)] rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
+                  <input required type="text" className="w-full bg-gray-50 border border-gray-200 text-slate-900 rounded-2xl px-6 py-4 focus:outline-none focus:border-[var(--primary)] transition-all" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-[var(--muted)]">Message</label>
@@ -105,7 +105,7 @@ const ContactPage = () => {
                   alt="Location"
                 />
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <div className="bg-white px-6 py-3 rounded-full font-bold shadow-2xl">Find Us Here</div>
+                  <div className="bg-white px-8 py-4 rounded-full font-black shadow-2xl text-slate-900 hover:scale-105 transition-transform cursor-pointer">Find Us Here</div>
                 </div>
               </div>
             </div>
