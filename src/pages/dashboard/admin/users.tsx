@@ -49,8 +49,8 @@ const AdminUsersPage = () => {
       <div className="space-y-10 pb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold dark:text-white">Customer Base</h1>
-            <p className="text-[var(--muted)] font-medium">Manage user accounts, roles, and permissions.</p>
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white">Customer Base</h1>
+            <p className="text-slate-500 dark:text-[var(--muted)] font-medium">Manage user accounts, roles, and permissions.</p>
             {error && (
               <p className="text-sm text-red-500 font-semibold mt-2">{error}</p>
             )}
@@ -60,7 +60,7 @@ const AdminUsersPage = () => {
 
         <div className="bg-white dark:bg-gray-900 rounded-[3rem] border border-[var(--border)] shadow-sm overflow-hidden transition-colors">
           <div className="p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-[var(--border)]">
-            <h3 className="text-xl font-bold dark:text-white">Active Users</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Active Users</h3>
             <div className="bg-gray-100 dark:bg-gray-800 rounded-xl px-6 py-2.5 flex items-center space-x-3 w-80">
               <Search size={18} className="text-gray-400" />
               <input type="text" placeholder="Search by name, email..." className="bg-transparent border-none text-sm w-full dark:text-white focus:outline-none" />
@@ -91,7 +91,7 @@ const AdminUsersPage = () => {
                             {(u.name || '?').charAt(0)}
                           </div>
                           <div>
-                            <p className="text-sm font-bold dark:text-white">{u.name || '—'}</p>
+                            <p className="text-sm font-bold text-slate-900 dark:text-white">{u.name || '—'}</p>
                             <p className="text-xs text-[var(--muted)]">{u.email}</p>
                           </div>
                         </div>
