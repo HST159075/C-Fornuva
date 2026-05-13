@@ -75,8 +75,8 @@ const ManagerDashboard = () => {
         {/* Page Title */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold dark:text-white">Store Management</h1>
-            <p className="text-[var(--muted)] font-medium">Monitoring real-time performance and inventory.</p>
+            <h1 className="text-3xl font-black text-slate-900 dark:text-white">Store Management</h1>
+            <p className="text-slate-500 dark:text-[var(--muted)] font-medium">Monitoring real-time performance and inventory.</p>
           </div>
           <div className="flex items-center space-x-3">
             <span className="text-sm font-bold bg-white dark:bg-gray-800 px-4 py-2 rounded-xl border border-[var(--border)] dark:text-white">Today&apos;s View</span>
@@ -100,8 +100,8 @@ const ManagerDashboard = () => {
                 </div>
                 <span className="text-xs font-bold text-green-500 bg-green-50 dark:bg-green-500/10 px-2.5 py-1 rounded-full">{stat.change}</span>
               </div>
-              <p className="text-sm font-bold text-[var(--muted)] mb-1 uppercase tracking-widest">{stat.label}</p>
-              <h3 className="text-3xl font-black dark:text-white">{stat.value}</h3>
+              <p className="text-sm font-bold text-slate-500 dark:text-[var(--muted)] mb-1 uppercase tracking-widest">{stat.label}</p>
+              <h3 className="text-3xl font-black text-slate-900 dark:text-white">{stat.value}</h3>
             </motion.div>
           ))}
         </div>
@@ -109,7 +109,7 @@ const ManagerDashboard = () => {
         {/* Main Analytics */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           <div className="xl:col-span-2 bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm">
-            <h3 className="text-xl font-bold dark:text-white mb-10">Sales Performance</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-10">Sales Performance</h3>
             <div className="h-80 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={monthlyRevenue}>
@@ -124,7 +124,7 @@ const ManagerDashboard = () => {
           </div>
 
           <div className="xl:col-span-1 bg-white dark:bg-gray-900 p-8 md:p-12 rounded-[3rem] border border-[var(--border)] shadow-sm flex flex-col">
-            <h3 className="text-xl font-bold dark:text-white mb-10">Operational Status</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-10">Operational Status</h3>
             <div className="flex-grow flex items-center justify-center">
               <ResponsiveContainer width="100%" height={250}>
                 <PieChart>
@@ -152,7 +152,7 @@ const ManagerDashboard = () => {
         {/* Manager Action Table */}
         <div className="bg-white dark:bg-gray-900 rounded-[3rem] border border-[var(--border)] shadow-sm overflow-hidden">
           <div className="p-10 border-b border-[var(--border)]">
-            <h3 className="text-xl font-bold dark:text-white">Orders Awaiting Processing</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Orders Awaiting Processing</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
@@ -168,9 +168,9 @@ const ManagerDashboard = () => {
               <tbody className="divide-y divide-[var(--border)]">
                 {recentOrders.filter(o => o.status !== 'DELIVERED').map((order, idx) => (
                   <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                    <td className="p-6 font-bold text-sm dark:text-white">#{order.id.slice(-6).toUpperCase()}</td>
-                    <td className="p-6 font-bold text-sm dark:text-white">{order.user?.name}</td>
-                    <td className="p-6 font-bold text-sm dark:text-white">${Number(order.totalPrice).toFixed(2)}</td>
+                    <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">#{order.id.slice(-6).toUpperCase()}</td>
+                    <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">{order.user?.name}</td>
+                    <td className="p-6 font-bold text-sm text-slate-900 dark:text-white">${Number(order.totalPrice).toFixed(2)}</td>
                     <td className="p-6">
                       <span className="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-yellow-100 text-yellow-600">
                         {order.status}
